@@ -1,0 +1,16 @@
+﻿@using AZFrontend.Controllers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @if (ViewBag.Todos is null)
+    {
+        <div>No Todos</div>
+    }
+    @foreach (Todo todo in ViewBag.Todos)
+    {
+        <h1>@todo.Name</h1>
+        <p>@todo.Done</p>
+    }
+</div>
